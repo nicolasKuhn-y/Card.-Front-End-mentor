@@ -15,7 +15,9 @@ body {
   background-image: url("../images/pexels-henry-&-co-1939485.jpg");
 }
 
-p, h2, h3 {
+p,
+h2,
+h3 {
   margin: 0.8em 0em;
 }
 
@@ -32,7 +34,7 @@ p, h2, h3 {
   height: 100%;
 }
 
-.card {
+.main-flex .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,21 +46,23 @@ p, h2, h3 {
           box-shadow: -7px 10px 32px -6px rgba(0, 0, 0, 0.5);
   background-color: white;
   border-radius: 3%;
+  overflow: hidden;
 }
 
-.card-Top {
-  padding: 2em;
+.main-flex .card-Top {
+  padding: 1em;
 }
 
-.card-Top h2 {
+.main-flex .card-Top h2 {
   color: #16c5c2;
 }
 
-.card-Top span {
+.main-flex .card-Top span {
+  font-weight: 700;
   color: #9db91d;
 }
 
-.card-Top .text {
+.main-flex .card-Top .text {
   color: #98a6bd;
   line-height: 2rem;
 }
@@ -71,9 +75,6 @@ p, h2, h3 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
-  border-bottom-left-radius: 3%;
-  border-bottom-right-radius: 3%;
-  overflow: hidden;
 }
 
 .body-left,
@@ -85,7 +86,6 @@ p, h2, h3 {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  overflow: hidden;
   color: white;
   width: 50%;
 }
@@ -131,16 +131,7 @@ p, h2, h3 {
   bottom: 0.3rem;
 }
 
-.body-left .button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 80%;
-  position: relative;
-  left: 1.5rem;
-}
-
-.body-left .button-container button {
+.body-left button {
   background-color: #9db91d;
   color: white;
   padding: 0.5rem;
