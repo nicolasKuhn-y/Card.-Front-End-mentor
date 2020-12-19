@@ -31,7 +31,6 @@ body {
   box-shadow: -7px 10px 32px -6px rgba(0, 0, 0, 0.5);
   background-color: var(--full-White);
   border-radius: 3%;
-  margin: 1em;
 }
 
 .card-Top {
@@ -122,15 +121,23 @@ body {
 }
 
 @media (min-width: 320px) and (max-width: 425px) {
+  body {
+    height: auto;
+  }
+
   .card {
-    margin: 2em 1em;
+    margin: 1em;
+
+    & .card-Top {
+      padding: 1em;
+    }
   }
 
   .body-card {
     flex-flow: column;
 
     & div {
-      width: 100%;
+      width: auto;
     }
   }
 }
