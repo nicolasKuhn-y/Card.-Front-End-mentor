@@ -1,21 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
-:root {
-  --Cyan: hsl(179, 80%, 43%);
-  --Light-Cyan: hsla(179, 80%, 43%, 0.774);
-  --Bright-Yellow: hsl(71, 73%, 42%);
-  --Light-Gray: hsl(204, 43%, 93%);
-  --Grayish-Blue: hsl(218, 22%, 67%);
-  --full-White: hsl(0, 0%, 100%);
-  --white-Smoke: hsl(0, 0%, 96%);
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+
+$Cyan: hsl(179, 80%, 43%);
+$Light-Cyan: hsla(179, 80%, 43%, 0.774);
+$Bright-Yellow: hsl(71, 73%, 42%);
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+$full-White: hsl(0, 0%, 100%);
+$white-Smoke: hsl(0, 0%, 96%);
+
+$font-weights: (
+  "regular": 400,
+  "bold": 700,
+);
 
 body {
   font-family: "Karla", sans-serif;
   font-size: 16px;
+  font-weight: map-get($font-weights, regular);
   height: 100vh;
-  background-color: var(--white-Smoke);
+  background-color: $white-Smoke;
   background-image: url("../images/pexels-henry-&-co-1939485.jpg");
+}
+
+p, h2, h3{
+  margin: 0.8em 0em;
 }
 
 .main-flex {
@@ -29,22 +43,22 @@ body {
   display: flex;
   flex-flow: column wrap;
   box-shadow: -7px 10px 32px -6px rgba(0, 0, 0, 0.5);
-  background-color: var(--full-White);
+  background-color: $full-White;
   border-radius: 3%;
 }
 
 .card-Top {
   padding: 2em;
   & h2 {
-    color: var(--Cyan);
+    color: $Cyan;
   }
 
   & span {
-    color: var(--Bright-Yellow);
+    color: $Bright-Yellow;
   }
 
   & .text {
-    color: var(--Grayish-Blue);
+    color: $Grayish-Blue;
     line-height: 2rem;
   }
 }
@@ -62,12 +76,12 @@ body {
   display: flex;
   flex-flow: column nowrap;
   overflow: hidden;
-  color: var(--full-White);
+  color: $full-White;
   width: 50%;
 }
 
 .body-right {
-  background-color: var(--Light-Cyan);
+  background-color: $Light-Cyan;
   padding: 1em;
 
   & ul {
@@ -77,7 +91,7 @@ body {
 
   & li {
     list-style: none;
-    color: var(--Light-Gray);
+    color: $Light-Gray;
     line-height: 1.4em;
   }
 }
@@ -85,7 +99,7 @@ body {
 .body-left {
   display: flex;
   flex-flow: column wrap;
-  background-color: var(--Cyan);
+  background-color: $Cyan;
   padding: 1em;
   margin: 0em;
 
@@ -94,7 +108,7 @@ body {
   }
 
   & .duration-span {
-    color: var(--Light-Gray);
+    color: $Light-Gray;
     font-size: 0.9rem;
     margin-left: 0.5em;
     position: relative;
@@ -108,14 +122,15 @@ body {
     left: 1.5rem;
 
     & button {
-      background-color: var(--Bright-Yellow);
-      color: var(--full-White);
+      background-color: $Bright-Yellow;
+      color: $full-White;
       padding: 0.5rem;
       width: 100%;
       border-style: none;
       border-radius: 4px;
       box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
       cursor: pointer;
+      margin: 1em 0em;
     }
   }
 }
@@ -139,5 +154,7 @@ body {
     & div {
       width: auto;
     }
+
+  
   }
 }

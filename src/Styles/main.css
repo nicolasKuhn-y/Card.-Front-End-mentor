@@ -1,20 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
-:root {
-  --Cyan: hsl(179, 80%, 43%);
-  --Light-Cyan: hsla(179, 80%, 43%, 0.774);
-  --Bright-Yellow: hsl(71, 73%, 42%);
-  --Light-Gray: hsl(204, 43%, 93%);
-  --Grayish-Blue: hsl(218, 22%, 67%);
-  --full-White: hsl(0, 0%, 100%);
-  --white-Smoke: hsl(0, 0%, 96%);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   font-family: "Karla", sans-serif;
   font-size: 16px;
+  font-weight: 400;
   height: 100vh;
-  background-color: var(--white-Smoke);
+  background-color: whitesmoke;
   background-image: url("../images/pexels-henry-&-co-1939485.jpg");
+}
+
+p, h2, h3 {
+  margin: 0.8em 0em;
 }
 
 .main-flex {
@@ -40,7 +42,7 @@ body {
           flex-flow: column wrap;
   -webkit-box-shadow: -7px 10px 32px -6px rgba(0, 0, 0, 0.5);
           box-shadow: -7px 10px 32px -6px rgba(0, 0, 0, 0.5);
-  background-color: var(--full-White);
+  background-color: white;
   border-radius: 3%;
 }
 
@@ -49,15 +51,15 @@ body {
 }
 
 .card-Top h2 {
-  color: var(--Cyan);
+  color: #16c5c2;
 }
 
 .card-Top span {
-  color: var(--Bright-Yellow);
+  color: #9db91d;
 }
 
 .card-Top .text {
-  color: var(--Grayish-Blue);
+  color: #98a6bd;
   line-height: 2rem;
 }
 
@@ -84,12 +86,12 @@ body {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   overflow: hidden;
-  color: var(--full-White);
+  color: white;
   width: 50%;
 }
 
 .body-right {
-  background-color: var(--Light-Cyan);
+  background-color: rgba(22, 197, 194, 0.774);
   padding: 1em;
 }
 
@@ -100,7 +102,7 @@ body {
 
 .body-right li {
   list-style: none;
-  color: var(--Light-Gray);
+  color: #e5eff5;
   line-height: 1.4em;
 }
 
@@ -112,7 +114,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  background-color: var(--Cyan);
+  background-color: #16c5c2;
   padding: 1em;
   margin: 0em;
 }
@@ -122,7 +124,7 @@ body {
 }
 
 .body-left .duration-span {
-  color: var(--Light-Gray);
+  color: #e5eff5;
   font-size: 0.9rem;
   margin-left: 0.5em;
   position: relative;
@@ -139,8 +141,8 @@ body {
 }
 
 .body-left .button-container button {
-  background-color: var(--Bright-Yellow);
-  color: var(--full-White);
+  background-color: #9db91d;
+  color: white;
   padding: 0.5rem;
   width: 100%;
   border-style: none;
@@ -148,6 +150,7 @@ body {
   -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  margin: 1em 0em;
 }
 
 @media (min-width: 320px) and (max-width: 425px) {
