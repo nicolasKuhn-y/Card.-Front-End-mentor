@@ -2,8 +2,8 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
 }
 
 $Cyan: hsl(179, 80%, 43%);
@@ -31,7 +31,7 @@ body {
 p,
 h2,
 h3 {
-  margin: 0.8em 0em;
+  margin: 1rem 0em;
 }
 
 .main-flex {
@@ -48,86 +48,78 @@ h3 {
     border-radius: 3%;
     overflow: hidden;
   }
+}
 
-  .card-Top {
-    padding: 1em;
-    & h2 {
-      color: $Cyan;
-    }
+.card-Top {
+  padding: 1em;
+  & h2 {
+    color: $Cyan;
+  }
 
-    & span {
-      font-weight: 700;
-      color: $Bright-Yellow;
-    }
+  & span {
+    font-weight: map-get($font-weights, bold);
+    color: $Bright-Yellow;
+  }
 
-    & .text {
-      color: $Grayish-Blue;
-      line-height: 2rem;
-    }
+  & .text {
+    color: $Grayish-Blue;
+    line-height: 2rem;
   }
 }
-  .body-card {
-    display: flex;
-    flex-flow: row;
+
+.body-card {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.body-left,
+.body-right {
+  color: $full-White;
+  width: 50%;
+}
+
+.body-right {
+  background-color: $Light-Cyan;
+  padding: 1em;
+
+  & li {
+    list-style: none;
+    color: $Light-Gray;
+    line-height: 1.5rem;
+  }
+}
+
+.body-left {
+  background-color: $Cyan;
+  padding: 1em;
+  margin: 0em;
+
+  & .money-span {
+    font-size: 1.5em;
   }
 
-  .body-left,
-  .body-right {
-    display: flex;
-    flex-flow: column nowrap;
+  & .duration-span {
+    color: $Light-Gray;
+    font-size: 0.9rem;
+    margin-left: 0.5em;
+    position: relative;
+    bottom: 0.3rem;
+  }
+
+  & button {
+    background-color: $Bright-Yellow;
     color: $full-White;
-    width: 50%;
+    padding: 0.5rem;
+    width: 100%;
+    border-style: none;
+    border-radius: 4px;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-top: 2em;
   }
+}
 
-  .body-right {
-    background-color: $Light-Cyan;
-    padding: 1em;
-
-    & ul {
-      width: 100%;
-      padding: 0em;
-    }
-
-    & li {
-      list-style: none;
-      color: $Light-Gray;
-      line-height: 1.4em;
-    }
-  }
-
-  .body-left {
-    display: flex;
-    flex-flow: column wrap;
-    background-color: $Cyan;
-    padding: 1em;
-    margin: 0em;
-
-    & .money-span {
-      font-size: 1.5em;
-    }
-
-    & .duration-span {
-      color: $Light-Gray;
-      font-size: 0.9rem;
-      margin-left: 0.5em;
-      position: relative;
-      bottom: 0.3rem;
-    }
-
-    & button {
-      background-color: $Bright-Yellow;
-      color: $full-White;
-      padding: 0.5rem;
-      width: 100%;
-      border-style: none;
-      border-radius: 4px;
-      box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      margin: 1em 0em;
-    }
-  }
-
-.popUpContainer{
+.popUpContainer {
   position: fixed;
   left: 1.5em;
   bottom: 1.5em;
@@ -138,32 +130,30 @@ h3 {
   border: none;
 }
 
-.popUp{
+.popUp {
   padding: 0.5em;
   color: $full-White;
   margin: 1em;
 }
 
+@media (min-width: 320px) and (max-width: 425px) {
+  body {
+    height: auto;
+  }
 
-  @media (min-width: 320px) and (max-width: 425px) {
-    body {
-      height: auto;
-    }
+  .card {
+    margin: 1em;
 
-    .card {
-      margin: 1em;
-
-      & .card-Top {
-        padding: 1em;
-      }
-    }
-
-    .body-card {
-      flex-flow: column;
-
-      & div {
-        width: auto;
-      }
+    & .card-Top {
+      padding: 1em;
     }
   }
 
+  .body-card {
+    flex-flow: column;
+
+    & div {
+      width: auto;
+    }
+  }
+}

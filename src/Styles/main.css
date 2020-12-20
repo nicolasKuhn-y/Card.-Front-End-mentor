@@ -2,8 +2,8 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 p,
 h2,
 h3 {
-  margin: 0.8em 0em;
+  margin: 1rem 0em;
 }
 
 .main-flex {
@@ -49,20 +49,20 @@ h3 {
   overflow: hidden;
 }
 
-.main-flex .card-Top {
+.card-Top {
   padding: 1em;
 }
 
-.main-flex .card-Top h2 {
+.card-Top h2 {
   color: #16c5c2;
 }
 
-.main-flex .card-Top span {
+.card-Top span {
   font-weight: 700;
   color: #9db91d;
 }
 
-.main-flex .card-Top .text {
+.card-Top .text {
   color: #98a6bd;
   line-height: 2rem;
 }
@@ -73,19 +73,12 @@ h3 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .body-left,
 .body-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
   color: white;
   width: 50%;
 }
@@ -95,25 +88,13 @@ h3 {
   padding: 1em;
 }
 
-.body-right ul {
-  width: 100%;
-  padding: 0em;
-}
-
 .body-right li {
   list-style: none;
   color: #e5eff5;
-  line-height: 1.4em;
+  line-height: 1.5rem;
 }
 
 .body-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
   background-color: #16c5c2;
   padding: 1em;
   margin: 0em;
@@ -141,7 +122,7 @@ h3 {
   -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  margin: 1em 0em;
+  margin-top: 2em;
 }
 
 .popUpContainer {

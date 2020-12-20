@@ -15,7 +15,7 @@ function createPopUp() {
 
   mainFlex.appendChild(container);
 
-  setTimeout(() => signUpValidation.remove(), 3000);
+  setTimeout(() => container.remove(), 3000);
 }
 
 signUpButtom.addEventListener("click", () => createPopUp());
