@@ -127,6 +127,24 @@ h3 {
     }
   }
 
+.popUpContainer{
+  position: fixed;
+  left: 1.5em;
+  bottom: 1.5em;
+  background-color: $Cyan;
+  border-radius: 5px;
+  height: auto;
+  width: 18em;
+  border: none;
+}
+
+.popUp{
+  padding: 0.5em;
+  color: $full-White;
+  margin: 1em;
+}
+
+
   @media (min-width: 320px) and (max-width: 425px) {
     body {
       height: auto;
